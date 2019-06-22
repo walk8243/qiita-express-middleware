@@ -1,0 +1,6 @@
+[submodule "express-middleware-server"]
+	path = express-middleware-server
+	url = git@github.com:walk8243/express-middleware-server.git
+[submodule "express-middleware-router"]
+	path = express-middleware-router
+	url = git@github.com:walk8243/express-middleware-router.git
