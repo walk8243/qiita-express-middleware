@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    // 通常のビルドタスク
+    {
+      "type": "Server Build",
+      "tsconfig": "tsconfig.json",
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    // デバッグ用のビルドタスク
+    {
+      "label": "Server Debug Build",
+      "type": "shell",
+      "command": "yarn",
+      "args": [
+        "run",
+        "tsc",
+        "-p", "./tsconfig.json",
+        "--sourceMap", "true"
+      ],
+      "group": "build"
+    }
+  ]
+}

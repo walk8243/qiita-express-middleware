@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Qiita Express Server",
+      "program": "${workspaceFolder}/dist/server.js",
+      "autoAttachChildProcesses": true,
+      "env": {
+        "CLUSTER": "2"
+      },
+      "preLaunchTask": "Server Debug Build",
+      "console": "internalConsole"
+    }
+  ]
+}
