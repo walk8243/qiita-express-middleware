@@ -3,7 +3,8 @@
   "tasks": [
     // 通常のビルドタスク
     {
-      "type": "Server Build",
+      "label": "Server Build",
+      "type": "typescript",
       "tsconfig": "tsconfig.json",
       "problemMatcher": [
         "$tsc"
