@@ -12,10 +12,7 @@
       "group": {
         "kind": "build",
         "isDefault": true
-      },
-      "dependsOn": [
-        "copy server"
-      ]
+      }
     },
     // デバッグ用のビルドタスク
     {
@@ -28,51 +25,7 @@
         "-p", "./tsconfig.json",
         "--sourceMap", "true"
       ],
-      "group": "build",
-      "dependsOn": [
-        "copy server"
-      ]
-    },
-    // `express-middleware-server` から必要なファイルをコピー
-    {
-      "label": "copy server",
-      "type": "shell",
-      "linux": {
-        "command": "cp",
-        "args": [
-          "-r",
-          "node_modules/express-middleware-server/dist", "."
-        ]
-      },
-      "windows": {
-        "command": "Copy-Item",
-        "args": [
-          "node_modules\\express-middleware-server\\dist", ".",
-          "-Recurse"
-        ]
-      },
-      "dependsOn": [
-        "clean dist"
-      ]
-    },
-    // distをcleanする
-    {
-      "label": "clean dist",
-      "type": "shell",
-      "linux": {
-        "command": "rm",
-        "args": [
-          "-rf",
-          "dist"
-        ]
-      },
-      "windows": {
-        "command": "Remove-Item",
-        "args": [
-          "dist",
-          "-Recurse"
-        ]
-      },
+      "group": "build"
     }
   ]
 }
