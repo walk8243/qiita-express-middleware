@@ -8,7 +8,8 @@
       "program": "${workspaceFolder}/dist/server.js",
       "autoAttachChildProcesses": true,
       "env": {
-        "CLUSTER": "2"
+        "CLUSTER": "2",
+        "SERVER": "true"
       },
       "preLaunchTask": "Server Debug Build",
       "console": "internalConsole"
